@@ -2,39 +2,50 @@ import 'package:flutter/material.dart';
 
 void main() {
   runApp(MyApp());
-
-  print("hi there");
 }
 
 class MyApp extends StatelessWidget {
-  MyApp({super.key});
-
-  // This widget is the root of your application.
-  //VAriable
-  String name = "Rushil";
-  int age = 19;
-  double pi = 3.14159;
-  bool isBeginner = true;
-
-  /*  
-  BASIC MATH 
-  + 
-  -
-  /
-  9%4 = 1
-  *
-
-  Comparison
-  5==5 true
-  2!= 3 true
-  3>2 true
-  */
+  const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: Scaffold(),
+    return MaterialApp(
       debugShowCheckedModeBanner: false,
+
+      home: Scaffold(
+        backgroundColor: Color.fromARGB(255, 65, 98, 140),
+
+        body: Center(
+          child: Container(
+            height: 200,
+            width: 200,
+
+            decoration: BoxDecoration(
+              color: const Color.fromARGB(255, 115, 151, 213),
+              borderRadius: BorderRadius.circular(30),
+            ),
+
+            padding: EdgeInsets.all(20),
+
+            child: const Column(
+              // The Column can have multiple children
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Icon(Icons.line_weight, color: Colors.white, size: 40),
+                SizedBox(height: 8), // Adds space
+                Text(
+                  "Gravity",
+                  style: TextStyle(
+                    fontSize: 18,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.white,
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ),
+      ),
     );
   }
 }
